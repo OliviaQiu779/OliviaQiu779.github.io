@@ -2,150 +2,152 @@
 <html>
   <title> axolotl is not a fish </title>
   <head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&display=swap" rel="stylesheet">
 <link rel="shortcut icon" href="emoji.png">
 <meta charset="UTF-8">
+    
     <style>
-      #topic {
-        z-index: 10;
-        position: relative;
-        color: rgb(255, 13, 235);
-        background-color: #7ad5ff;
-        text-shadow: 1px 3px 1px white;
-        border: 5px solid rgb(18, 77, 255);
-        width: 500px;
-        left: 450px;
-        top: 350px;
-        font-size: 40px;
-        font-family: "Bitcount Single", system-ui;
-        text-align: center;
-      }
-
-      .paragraph{
-        position: fixed;
-        color: white;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 20px;
-        text-align: left;
-      }
-        
-      #wiki {
-        z-index: 0;
-        left: 0px;
-        top: 0px;
-        width: 800px ;
-      }
-      
-      #wiki:link {
-        color:white;
-        text-decoration: none; 
-      }
-      #wiki:hover{
-        color:aqua;
-        font-style: italic;
-      }
-
-      #wiki:visited {
-        color:magenta;
-        text-decoration: none; 
-      }
-
-      #wiki2{
-        z-index: 1;
-        left: 1500px;
-        top: 500px;
-        width: 200px;
-      }
-
-      #wiki2:link {
-        color:white;
-        text-decoration: none; 
-      }
-      #wiki2:hover{
-        color:aqua;
-        font-style: italic;
-      }
-
-      #wiki2:visited {
-        color:magenta;
-        text-decoration: none; 
-      }
-      
-      #coral{
-        z-index: 0 ;
-   position: fixed;
-         bottom: 0px;
-        right: 0px;
-        width: 200px;
-        opacity: 0.2;
-        scale: 6;
-
-  filter: 
-    invert(1) blur(0px)
+#topic {
+  z-index: 10;
+  position: relative;
+  color: rgb(255, 13, 235);
+  background-color: #7ad5ff;
+  text-shadow: 1px 3px 1px white;
+  border: 0.5vh solid rgb(18, 77, 255);
+  width: 29vw;          /* 500px */
+  left: 26vw;           /* 450px */
+  top: 37vh;            /* 350px */
+  font-size: 4.2vh;     /* 40px */
+  font-family: "Bitcount Single", system-ui;
+  text-align: center;
 }
-      #itsnotafish {
-         z-index: -1 ;
-        position: fixed;
-        top: 0px;
-        right: 0px;
-        width: 1200px;
-        opacity: .6;
-        border-radius: 15px 50px 30px 5px;
-      }
 
-      #pink {
-    z-index: 2;
-    position: fixed;
-    top: 100px;
-    left: 200px;
-    width: 200px;
-    height: 200px;
-    opacity: 1;
-    filter: invert(1) contrast(1.6);
-    transition: all 3s ease-in;
+.paragraph{
+  position: fixed;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2vh;       /* 20px */
+  text-align: left;
+}
+
+#wiki {
+  z-index: 0;
+  left: 0vw;
+  top: 0vh;
+  width: 46vw;          /* 800px */
+}
+
+#wiki:link {
+  color:white;
+  text-decoration: none; 
+}
+#wiki:hover{
+  color:aqua;
+  font-style: italic;
+}
+#wiki:visited {
+  color:magenta;
+  text-decoration: none; 
+}
+
+#wiki2{
+  z-index: 1;
+  left: 87vw;           /* 1500px */
+  top: 52vh;            /* 500px */
+  width: 11.5vw;        /* 200px */
+}
+
+#wiki2:link {
+  color:white;
+  text-decoration: none; 
+}
+#wiki2:hover{
+  color:aqua;
+  font-style: italic;
+}
+#wiki2:visited {
+  color:magenta;
+  text-decoration: none; 
+}
+
+#coral{
+  z-index: 0 ;
+  position: fixed;
+  bottom: 0vh;
+  right: 0vw;
+  width: 11.5vw;        /* 200px */
+  opacity: 0.2;
+  scale: 6;
+  filter: invert(1) blur(0px);
+}
+
+#itsnotafish {
+  z-index: -1 ;
+  position: fixed;
+  top: 0vh;
+  right: 0vw;
+  width: 69vw;          /* 1200px */
+  opacity: .6;
+  border-radius: 1.5vh 5vh 3vh 0.5vh;
+}
+
+#pink {
+  z-index: 2;
+  position: fixed;
+  top: 10vh;            /* 100px */
+  left: 12vw;           /* 200px */
+  width: 11.5vw;        /* 200px */
+  height: 21vh;         /* 200px */
+  opacity: 1;
+  filter: invert(1) contrast(1.6);
+  transition: all 3s ease-in;
 }
 
 #pink:hover {
-    height: 500px;
-    filter: invert(0) contrast(0.8) blur(10px);
+  height: 52vh;         /* 500px */
+  filter: invert(0) contrast(0.8) blur(10px);
 }
 
-      #a{
-        z-index: 1;
-        position: fixed;
-         top: 30px;
-        right: 0px;
-        width: 200px;
-        opacity: 0.8;
-          transform: scaleX(2.5);
+#a{
+  z-index: 1;
+  position: fixed;
+  top: 3vh;             /* 30px */
+  right: 0vw;
+  width: 11.5vw;        /* 200px */
+  opacity: 0.8;
+  transform: scaleX(2.5);
   transform-origin: right top;
-      }
+}
 
-      #face{
-        z-index: 2;
-        position: fixed;
-         top: 100px;
-        right: 30px;
-        width: 150px;
-        height: 150px;
-        opacity: 0.8;
-        transition: all 3s ease-in;
-      }
+#face{
+  z-index: 2;
+  position: fixed;
+  top: 10vh;            /* 100px */
+  right: 2vw;           /* 30px */
+  width: 9vw;         /* 150px */
+  height: 15.5vh;       /* 150px */
+  opacity: 0.8;
+  transition: all 3s ease-in;
+}
 
-      #face:hover {
-        height: 500px;
-      }
+#face:hover {
+  height: 52vh;         /* 500px */
+}
 
-      #flower {
-         z-index: 1 ;
+#flower {
+  z-index: 1 ;
   position: fixed;   
-  top: 200px;       
-  left: 300px;      
-  width: 400px;     
+  top: 21vh;            /* 200px */
+  left: 17vw;           /* 300px */
+  width: 23vw;          /* 400px */
   opacity: 0.9;
 }
+
 .above {
   filter: blur(0);
   transition: filter 1s ease-in-out; 
@@ -163,28 +165,65 @@
 .background:hover{
   filter: blur(5px);
 }
+
 #highlight {
   color: magenta;
   font-weight: bold;
 }
-      body {
-           background-color: pink;
-          }
+
+body {
+  background-color: pink;
+  cursor: cell;
+}
+
+#JellyFish {
+  position: fixed;
+  left: 0.5vw;   /* 10px */
+  bottom: 1vh;   /* 10px */
+}
+
+#bottomright {
+position: fixed; 
+background-color: blue; 
+width: 9vw; 
+min-width: 90px; 
+max-width: 300px; 
+height: 3vh;
+top: 97vh; 
+left: 97vw; 
+z-index: 10000;
+ display: none;
+}
+
+@media (max-width: 600px) {
+  #bottomright {
+    display: inline;
+  }
+
+  body {
+    background-color: rgb(255, 0, 200);
+  }
+}
 
     </style>
   </head>
   <body>
-    <video loop controls id="flower" src="flower.mp4" type="video/[your-video-format]"></video> <!--https://pin.it/66e02FNsh -->
-     <img class="background" id="itsnotafish" src="creature.png"> <!-- https://axolotlplanet.com/products/leucistic-axolotl -->
-     <img class="above" id="pink" src="pink.png"> <!--https://axolotlplanet.com/products/albino-axolotl-->
-     <img class= "above" id="a" src="axolotl2.jpg"> <!--https://a-z-animals.com/animals/axolotl/axolotl-facts/axolotl-pet-guide/-->
-     <img class="background" id="coral" src="coral.jpg"> <!--https://pin.it/6qF4jfUVq-->
+
+    <div id="bottomright"></div> 
+     
+    <h1 id="topic">
+    its not a fish
+     </h1>
+
+    <a href="page2.html" id="JellyFish">JellyFish</a>
+    <video alt="the metamorphsis of a yellowish flower" loop controls id="flower" src="flower.mp4" type="video/[your-video-format]"></video> <!--https://pin.it/66e02FNsh -->
+     <img alt="a pink axolotl in the ocean" class="background" id="itsnotafish" src="creature.png"> <!-- https://axolotlplanet.com/products/leucistic-axolotl -->
+     <img alt="a photo of a pink axolotl" class="above" id="pink" src="pink.png"> <!--https://axolotlplanet.com/products/albino-axolotl-->
+     <img alt="another pink axolotl" class= "above" id="a" src="axolotl2.jpg"> <!--https://a-z-animals.com/animals/axolotl/axolotl-facts/axolotl-pet-guide/-->
+     <img alt="a yellow and orange gradient coral in the ocean" class="background" id="coral" src="coral.jpg"> <!--https://pin.it/6qF4jfUVq-->
      <a href ="https://minecraft.wiki/w/Axolotl">
-    <img class="above" id="face" src="face.jpg"> <!--https://www.facebook.com/CatCoq/posts/axolotl-love-are-you-wondering-why-i-painted-pink-fish-aliens-welcome-to-my-axol/2108745576052368/-->
+    <img alt="a close up of hte face of a pink axolotl" class="above" id="face" src="face.jpg"> <!--https://www.facebook.com/CatCoq/posts/axolotl-love-are-you-wondering-why-i-painted-pink-fish-aliens-welcome-to-my-axol/2108745576052368/-->
     </a>
-      <div id="topic">
-      its not a fish
-    </div>
     <a href="https://en.wikipedia.org/wiki/Axolotl"> 
     <div class="paragraph" id="wiki">
       <span id="highlight"> The axolotl </span> (/ˈæksəlɒtəl/ ⓘ; from Classical Nahuatl: āxōlōtl [aːˈʃoːloːtɬ] ⓘ) (Ambystoma mexicanum) is a species of paedomorphic mole salamander. They mature into the terrestrial adult form without undergoing <span id="highlight">metamorphosis</span>; the adults remain fully aquatic with obvious external gills. This trait, although somewhat unusual among the majority of amphibians, is not unique. Axolotls may be difficult to distinguish from the larval stage of other neotenic adult mole salamanders, such as mudpuppies  <span id="highlight">(Necturus spp.)</span> or the occasionally paedomorphic tiger salamander (A. tigrinum).[4]
@@ -198,4 +237,12 @@ A large captive population of axolotls currently exists, with the specimens bein
 </div>
 </a>
   </body>
+  <script>
+const isComp = window.matchMedia('(min-width: 600px)')
+
+if (isComp.matches) {
+alert("you're probably on your desktop!"); 
+}
+
+</script>
 </html>
