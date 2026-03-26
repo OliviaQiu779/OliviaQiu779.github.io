@@ -1,0 +1,259 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<style>
+
+.dot{
+    z-index:999;
+  position:fixed;
+  width:30px;
+  height:30px;
+  background:#00cc66;
+  border-radius:50%;
+
+  box-shadow: 0 0 8px rgba(0,200,100,0.6);
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dot:hover{
+  transform: scale(1.6);
+  box-shadow: 0 0 18px rgba(0,200,100,0.9);
+}
+
+
+#dot1 { top: 15vh; left: 20vw; }
+#dot2 { top: 30vh; left: 60vw; }
+#dot3 { top: 50vh; left: 35vw; }
+#dot4 { top: 70vh; left: 75vw; }
+#dot5 { top: 25vh; left: 80vw; }
+#dot6 { top: 65vh; left: 10vw; }
+
+    
+#topic{
+z-index:10;
+position:fixed;
+
+width:30vw;
+left:20vw;
+top:20vh;
+
+padding:25px;
+
+font-size:3vh;
+font-family:Arial, Helvetica, sans-serif;
+text-align:center;
+
+color:white;
+
+background:linear-gradient(
+135deg,
+#c8c8ff,
+#8aa4ff,
+#6f8cff
+);
+
+border:3px solid white;
+
+border-radius:8px;
+
+box-shadow:
+0 0 10px #8aa4ff,
+0 0 25px #6f8cff,
+8px 8px 0 rgb(104, 87, 255);
+
+backdrop-filter:blur(6px);
+
+opacity:0;
+}
+
+
+body{
+margin:0;
+overflow-x:hidden;
+}
+
+.paragraph{
+z-index:0;
+color:rgb(36,174,18);
+
+position:absolute;
+top:0vh;
+left:0vw;
+
+font-size:28px;
+line-height:1.8;
+
+box-sizing:border-box;
+
+animation: wind 6s ease-in-out infinite;
+}
+
+
+@keyframes wind{
+
+0%{
+transform:translateX(0px) skewX(0deg);
+}
+
+20%{
+transform:translateX(6px) skewX(2deg);
+}
+
+40%{
+transform:translateX(-8px) skewX(-3deg);
+}
+
+60%{
+transform:translateX(5px) skewX(2deg);
+}
+
+80%{
+transform:translateX(-4px) skewX(-1deg);
+}
+
+100%{
+transform:translateX(0px) skewX(0deg);
+}
+
+}
+
+
+.bench{
+z-index:1;
+position:fixed;
+left:10vw;
+top:40vh;
+width:60vw;
+}
+
+
+@keyframes float{
+0%{transform:translateY(0)}
+50%{transform:translateY(-15px)}
+100%{transform:translateY(0)}
+}
+
+#Misty{
+z-index:2;
+position:fixed;
+width:22vw;
+left:0vw;
+top:15vh;
+
+opacity:0;
+
+animation:float 4s ease-in-out infinite;
+}
+
+#Jessie{
+z-index:2;
+position:fixed;
+width:35vw;
+right:5vw;
+top:45vh;
+
+opacity:0;
+
+animation:float 5s ease-in-out infinite;
+}
+
+#pokemon{
+z-index:3;
+position:fixed;
+width:20vw;
+right:0vw;
+top:25vh;
+border-radius:12px;
+
+opacity:0;
+}
+
+#Jigglypuff {
+z-index:3;
+position:fixed;
+width:12vw;
+left:16vw;
+top:62vh;
+opacity:0;
+}
+</style>
+</head>
+
+<body>
+
+<h1 id="topic">
+IN HONOR OF RACHAEL LILLIS  
+WHOSE ICONIC VOICE  
+FILLED SATURDAY MORNINGS  
+INSPIRING GENERATIONS TO COME
+</h1>
+
+<div class="paragraph" id="info"></div>
+
+<img alt="the bench" class="bench" src="bench.png">
+
+<img alt="Misty Pokémon" id="Misty" src="misty.jpg">
+
+<img alt="Jessie Pokémon" id="Jessie" src="jessie.png">
+
+<img alt="Jigglypuff Pokémon" id="Jigglypuff" src="Jiggly.png">
+
+<video loop controls id="pokemon" src="pokemon.MOV"></video>
+
+<script>
+
+let text = `Rachael Lillis (July 8, 1969[a] – August 10, 2024) was an American voice actress. She was best known for her performances as Misty, Jessie, and Jigglypuff in the first eight seasons of the English dub of the TV series Pokémon. She also provided voices for many other animation works and video games. Early life Rachael Lillis was born to John and Constance Lillis (née Zafuto) in Niagara Falls, New York, on July 8, 1969. Her father served in the U.S. Navy and was a maintenance manager.[3][4] She was the youngest of six children.[3] Lillis and her family later moved to Plano, Texas.[5] Lillis attended Smith College, where she was a premed student.[3] She trained in opera before she became a voice actor.[6] She studied voice acting in Boston and moved to New York City in 1996. She cited Mel Blanc and June Foray among her influences.[7] Career Lillis became known for voicing Misty and Jessie in the English dub of the Pokémon anime. She also voiced Pokémon such as Goldeen, Jigglypuff, Vulpix and Venonat on the show. Lillis appeared in 423 Pokémon episodes.[6] She voiced various Pokémon in the Super Smash Bros. video games.[6] She was also the voice of Utena Tenjo in Revolutionary Girl Utena, and voiced characters in Winx Club, Hunter × Hunter, Your Lie in April and Gall Force, among other shows.[3][8][9] Lillis's last voice acting role was in Hunter × Hunter: The Last Mission. According to Veronica Taylor, Lillis had difficulty finding work during the COVID-19 pandemic, in part due to a lack of recording equipment at her home. In 2023, Lillis attended a Pokémon cast reunion in London.[3] Illness and death In May 2024, a GoFundMe campaign created by Lillis's sister announced that Lillis had developed breast cancer. Several of her fellow actors shared the campaign to help raise money for her care.[10] The campaign raised $98,000 by the time she died, with the money going towards Lillis's remaining bills, a memorial service and cancer research.[6] The cancer spread to her spine, which left her barely able to walk, and she eventually moved into a Los Angeles nursing home to receive care.[11] Lillis died on August 10, 2024, at the age of 55.[3][2] In 2025, money was raised to donate a bench in her honor in X’s Upper West Side. It is #7603 on the path between 106th St and 108th St off X West. Filmography Voice roles Film List of voice performances in films Year Title Role Notes Refs[1] 1999 Pokémon: The First Movie Misty, Jessie, Vulpix, Venonat, Goldeen, Jigglypuff [12] 2000 Pokémon: The Movie 2000 2001 Night on the Galactic Railroad Marceau Pokémon: Mewtwo Returns Misty, Jessie, Jigglypuff, Vulpix, Goldeen, Torchic, Beautifly Pokémon 3: Spell of the Unown Revolutionary Girl Utena: The Movie Utena Tenjō 2002 Pokémon 4Ever Misty, Jessie, Jigglypuff, Vulpix, Goldeen, Torchic, Beautifly 2003 Pokémon Heroes 2004 Pokémon: Jirachi Wish Maker 2005 Pokémon: Destiny Deoxys 2006 Pokémon: Lucario and the Mystery of Mew 2012 Berserk: The Golden Age Arc I The Egg of the King Princess Charlotte [12][13] 2017–2020 Fate/stay night: Heaven's Feel Sella Home video edition only; later replaced by Julia McIlvaine in Heaven's Feel III. spring song 2019 Hunter × Hunter: The Last Mission Cocco Last role. [12] Pokémon Detective Pikachu Jigglypuff Archival recording [14] Anime List of dubbing performances in anime Year Title Role Notes Refs[1] 1997 Takegami: Guardian of Darkness Satsuki First principal role in a series [15] 1998 The Slayers Cally, Paula [15] 1998 Revolutionary Girl Utena Utena Tenjō, Chu Chu [16][17] 1998–2006 Pokémon Misty, Jessie, Jigglypuff, Pikachu (rarely), various [7][16][17][18] 1999 Slayers Next Martina Zoana Mel Navratilova, Kira [18] 2000 Geobreeders Takumi Sakurai Irresponsible Captain Tylor Yuriko Star, Noriko [12][19] Shamanic Princess Mimi Joyman, Suzanna White Boogiepop Phantom Nagi Kirima, Manaka Kisaragi [16] RG Veda Ashura X Media Dub Gokudo Miroku, Mora, Nihi [20][16] Harlock Saga Fricka Twin Signal Elara, Number 3 [12] 2002 Berserk Princess Charlotte [12] His and Her Circumstances Miyako Mizawa, Aya Sawada, various [21][16] Maetel Legend Queen La Andromeda Prometheum [22] Now and Then, Here and There Boo, Sis Voltage Fighter Gowcaizer Omni Exist [23] 2003 Alien Nine Miyu Tamaki 2003–2006 Animation Runner Kuromi Mai Horaguchi 2003 DNA² Ami Kurimoto K.O. Beast V-Sion Sonic X Danny [17][23] 2004 Comic Party Mizuki Takase [17] Gravitation Ayaka Usami Nana Seven of Seven Hitomi Onodera, Mitsuko Suzuki Shrine of the Morning Mist Shizuka Midoh World of Narue Kanaka Nanase, Miss Īzuka [12] 2005 Hammerboy Poplar [24] Midori Days Haruka Kasugano Mew Mew Power Gym Team Girl Shingu: Secret of the Stellar Wars Momoe Sanemori [12] 2005–2010 Genshiken Kanako Ono [18] 2006 Boys Be... Aya Kurihara [25][16] Pokémon Chronicles Misty, Jessie 2007 Dinosaur King Dr. Reese Drake, Ursula, Laura [18] The Third: The Girl with the Blue Eye Rona Fauna [26] 2008 Pokémon Mystery Dungeon: Explorers of Time and Darkness Sunflora, Shinx brother [12] 2010 Mobile Suit Gundam Unicorn Micott Bartsch [27] 2011 Bakuman Amy [12] 2015 Fate/stay night: Unlimited Blade Works Sella As Rachael McCabe [28] 2016 Your Lie in April Ryoko Miyazono [23] 2016–2019 Hunter × Hunter Mito Freecss, Cocco [12] Animation List of voice performances in animation Year Title Role Notes Refs[1] 2001–2003 Cubix Hela Nemo [18] 2003 Teenage Mutant Ninja Turtles Tomoe Ame [17][29] 2004 Shadow of the Elves Thalia [17][18] 2004–2006 Winx Club Headmistress Faragonda, various 4Kids dub [30] 2006–2010 Chaotic Intress [18] Video games List of voice performances in video games Year Title Role Notes Refs[1] 1999 Super Smash Bros. Jigglypuff Grouped under Voice Actors [4][31] 2000 Pokémon Puzzle League Misty, Jessie, Jigglypuff [32] Valkyrie Profile Jelanda, Lyseria, Mystina [33] 2001 Super Smash Bros. Melee Jigglypuff Grouped under Voices [4][34] 2003 Ape Escape 2 Natalie North American English dub [18] 2008 Super Smash Bros. Brawl Jigglypuff, Goldeen Grouped under Character Voice [4][12] 2014 Super Smash Bros. for Nintendo 3DS / Wii U [4][12] 2015 Lego Jurassic World As Rachael McCabe [35] 2018 Super Smash Bros. Ultimate Jigglypuff, Goldeen Grouped under Character Voices [4][12] Audiobooks List of voice performances in audiobooks Year Title Author Notes Refs[1][36] 2005 Diary of a Fairy Godmother Esme Raji Codell 2006 Miss Watson Wants Your Teeth Alison McGhee Production credits Script adaptation Year Title Medium Notes Refs 2001 Apocalypse Zero TV [37] Gokudo Television [20] 2002 Boogiepop Phantom Television [38] 2003 K.O. Beast Television [39] Translator Year Title Medium Notes Refs 2002 Cleopatra DC Television [40]`
+let i = 0
+let speed = 10
+
+function typeWriter(){
+
+if(i < text.length){
+
+document.getElementById("info").innerHTML += text.charAt(i)
+
+i++
+
+setTimeout(typeWriter,speed)
+
+}
+
+}
+
+typeWriter()
+
+window.addEventListener("scroll",function(){
+
+let scroll = window.scrollY
+
+let misty = document.getElementById("Misty")
+let jessie = document.getElementById("Jessie")
+let pokemon = document.getElementById("pokemon")
+let topic = document.getElementById("topic")
+let Jigglypuff = document.getElementById("Jigglypuff")
+
+misty.style.opacity = Math.min((scroll-600)/500,1)
+
+jessie.style.opacity = Math.min(Math.max((scroll-200)/500,0),1)
+
+pokemon.style.opacity = Math.min(Math.max(scroll/500,0),1)
+
+Jigglypuff.style.opacity = Math.min(Math.max((scroll-400)/500,0),1)
+
+topic.style.opacity = Math.min(Math.max((scroll-800)/500,0),1)
+
+})
+
+</script>
+
+</body>
+<a href="index.html" class="dot" id="dot1"></a>
+<a href="index2.html" class="dot" id="dot2"></a>
+<a href="index3.html" class="dot" id="dot3"></a>
+<a href="index4.html" class="dot" id="dot4"></a>
+<a href="index5.html" class="dot" id="dot5"></a>
+<a href="index6.html" class="dot" id="dot6"></a>
+</html>

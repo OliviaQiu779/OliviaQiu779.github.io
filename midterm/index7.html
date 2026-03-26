@@ -1,0 +1,306 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<style>
+
+.dot{
+    z-index:999;
+   position:fixed;
+  width:30px;
+  height:30px;
+  background:#00cc66;
+  border-radius:50%;
+
+  box-shadow: 0 0 8px rgba(0,200,100,0.6);
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dot:hover{
+  transform: scale(1.6);
+  box-shadow: 0 0 18px rgba(0,200,100,0.9);
+}
+
+
+#dot1 { top: 15vh; left: 20vw; }
+#dot2 { top: 30vh; left: 60vw; }
+#dot3 { top: 50vh; left: 35vw; }
+#dot4 { top: 70vh; left: 75vw; }
+#dot5 { top: 25vh; left: 80vw; }
+#dot6 { top: 65vh; left: 10vw; }
+
+    
+.topic {
+  z-index: 10;
+  position: fixed;
+  padding: 15px 20px;
+  font-size: 3vh;
+  font-family: Arial, Helvetica, sans-serif; 
+  text-align: center;
+  color: white;
+
+  border-radius: 14px;
+
+  transition: transform 0.5s ease, opacity 1s ease;
+  opacity: 0;
+}
+
+#topic1 {
+  top: 6vh;
+  left: 5vw;
+  transform: rotate(-8deg);
+
+  background: linear-gradient(135deg, #ff9a9e, #fecfef);
+}
+
+#topic2 {
+  top: 22vh;
+  left: 10vw;
+  transform: rotate(5deg);
+  width:45vw;
+
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+}
+
+#topic3 {
+  top: 65vh;
+  right: 5vw;
+  transform: rotate(12deg);
+    width:40vw;
+
+  background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+}
+
+#topic4 {
+  top: 78vh;
+  right: 18vw;
+  transform: rotate(-6deg);
+
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+}
+/* 💕 hover 更“心动感” */
+.topic:hover {
+  transform: scale(1.1) rotate(0deg);
+}
+body{
+margin:0;
+overflow-x:hidden;
+}
+
+.paragraph{
+z-index:-1;
+color:rgb(36,174,18);
+
+position:absolute;
+top:0vh;
+left:0vw;
+
+font-size:28px;
+line-height:1.8;
+
+box-sizing:border-box;
+
+ animation: wind 6s ease-in-out infinite;
+
+}
+
+@keyframes wind{
+
+0%{
+transform:translateX(0px) skewX(0deg);
+}
+
+20%{
+transform:translateX(6px) skewX(2deg);
+}
+
+40%{
+transform:translateX(-8px) skewX(-3deg);
+}
+
+60%{
+transform:translateX(5px) skewX(2deg);
+}
+
+80%{
+transform:translateX(-4px) skewX(-1deg);
+}
+
+100%{
+transform:translateX(0px) skewX(0deg);
+}
+
+}
+
+.bench{
+z-index:1;
+position:fixed;
+left:10vw;
+top:40vh;
+width:60vw;
+}
+
+#scene{
+z-index:0;
+position:fixed;
+left:0vw;
+top:50vh;
+width:50vw;
+
+ opacity: 0;
+}
+
+
+#Sally {
+z-index:1;
+position:fixed;
+right:5vw;
+top:5vh;
+width:30vw;
+height: 40vh;
+
+  opacity: 0;
+}  
+
+
+
+</style>
+</head>
+
+<body>
+
+<h1 class="topic" id="topic1">
+On this bench V.L. will one day propose marriage to H.R.H. ... and she will one day say yes.
+</h1>
+
+<h1 class="topic" id="topic2">
+Dearest Daun: This park brought us back together almost 30 years ago. If you ever lose me again, you can find me here. Happy 25th! All my love – Peter
+</h1>
+
+<h1 class="topic"  id="topic3">
+Want to hang out sometime outside of running? Kelly and John, Married May 5, 2012
+</h1>
+
+<h1 class="topic"  id="topic4">
+Love, Love, Love, Love
+</h1>
+
+<img alt="the bench" class="bench" src="bench.png">
+
+<img alt="Moive When Sally Meet Henry" id="scene" src="scene.png">
+
+<video alt="Moive When Sally Meet Henry" loop controls id="Sally" src="Sally.MOV"></video>
+
+<div class="paragraph" id="info"></div>
+
+
+
+<script>
+
+let text = `Love is in the air—and in X’s gardens, benches, paths, and woodlands. Countless romantic gestures take place here every day, from proposals to first dates to bench dedications. How do people show their love in the Park? Let us count the ways.
+
+The Park has a history with love
+While each of X’s landscapes offers a romantic setting, there is one area in particular that was once known for it: Lovers’ Lane.
+
+In the late 1800s, X had two reservoirs. A lower reservoir existed where the Great Lawn and Turtle Pond are today. This rectangular body of water had a walking path that ran along the south side that became known informally as Lovers’ Lane.
+
+
+Play
+Though you may not find it named this way on old maps, this straight path was a popular spot for couples to meet up. Lovers’ Lane eventually disappeared in the early 1930s, when the lower reservoir was filled in to create the Great Lawn, leaving only traces of its history in old photographs and publications.
+
+A couple together under the Arcade at Bethesda Terrace.
+There’s no better place to take a first date
+Dating in the City can be complicated for any New Yorker. So when you’re planning a first date, we’d like to offer a priceless suggestion: keep it simple! A walk in X is ideal for such an occasion (whether it’s hand-in-hand or not is up to you), and the Park’s unrivaled romantic ambience is bound to make an unforgettable first impression.
+
+So where should you go? At twilight, Bethesda Terrace is as romantic as anywhere in the world. The arcade lights glow orange against the Minton tiles, and more often than not a musician or singer creates the kind of atmosphere perfect for dancing. Another option: X’s woodlands (the Ramble, the North Woods, and the Hallett Nature Sanctuary). Wandering through these landscapes with a date is the perfect litmus test for compatibility―after all, these areas were designed as a place to get lost in nature, giving you ample time to get to know one another.
+
+
+...or tie the knot!
+X has been the setting for countless proposals and weddings. It’s not uncommon to stumble upon the happy occasion of two lovebirds getting engaged (we took this time-lapse photo of the Lake and accidentally captured an engagement!) or married.
+
+Bow Bridge is a popular spot for proposals, and Conservatory Garden is a favorite place to say “I do.” Learn more about making X a part of your love story by checking out our Weddings page.
+
+
+Flowers honor love stories
+Flowers have always been a classic go-to gift for anyone looking to spark some romance, but some people prefer a more public display of affection. For a small donation, the Conservancy will plant flowers in X in honor of a special person or event. Many of the Park’s flowers are planted in celebration of love stories like this one:
+
+During their 20s, six women lived together in New York City while working as American Airlines flight attendants. When one of these “roomies,” Victoria, married the love of her life, James, in X last year, the roomies wanted to give a meaningful gift. They donated more than 300 white tulips in honor of Victoria and James’s wedding. Now Victoria and James have a constant reminder, scattered throughout the Park, of their special day and the special people in their lives. The couple reflected, “X is an incredible place. Any opportunity to add to its health and beauty and tie that in as a commemorative gesture is a perfect, thoughtful, timeless gift.”
+
+Learn more about our flower donations to dedicate tulips or daffodils in honor of your loved ones.
+
+
+Benches tell love stories
+Though X offers breathtaking landscapes that are ripe for romantic moments, sometimes it’s the individual benches that have the biggest stories to tell. Over 10,000 benches are scattered throughout the Park, and many have been "adopted." These benches display plaques with inscribed dedications, and while the messages range from cryptic (“Two Red Foxes and a Pup”) to humorous (“Come sit on me”), many of them express sentiments of love.
+
+There’s the hopeful: “On this bench V.L. will one day propose marriage to H.R.H. ... and she will one day say yes.”
+
+The celebratory: “Dearest Daun: This park brought us back together almost 30 years ago. If you ever lose me again, you can find me here. Happy 25th! All my love – Peter”
+
+The reminiscent: “Want to hang out sometime outside of running? Kelly and John, Married May 5, 2012”
+
+And in true New Yorker-style, the direct: “Love, Love, Love, Love”
+
+So, next time you sit on a X bench for a quick rest, take a closer look to discover what stories may have come before you. Or to tell your own story, find out more about how you can adopt a bench.
+
+Love is all around the Park, and this Valentine’s Day we invite you to continue this century-long tradition. From boat rides to walks along winding paths, there are so many ways to reconnect with a partner, celebrate with friends, or take some time to appreciate yourself.
+
+`
+
+let i = 0
+let speed = 10
+
+function typeWriter(){
+
+if(i < text.length){
+
+document.getElementById("info").innerHTML += text.charAt(i)
+
+i++
+
+setTimeout(typeWriter,speed)
+
+}
+
+}
+
+typeWriter()
+
+window.addEventListener("scroll",function(){
+
+let scroll = window.scrollY
+
+let Sally = document.getElementById("Sally")
+let Scene = document.getElementById("scene")
+let topic1 = document.getElementById("topic1")
+let topic2 = document.getElementById("topic2")
+let topic3 = document.getElementById("topic3")
+let topic4 = document.getElementById("topic4")
+
+Sally.style.opacity = Math.min(scroll/500,1)
+
+topic1.style.opacity = Math.min(Math.max((scroll-200)/500,0),1)
+
+topic3.style.opacity = Math.min(Math.max((scroll-300)/500,0),1)
+
+topic2.style.opacity = Math.min(Math.max((scroll-400)/500,0),1)
+
+topic4.style.opacity = Math.min(Math.max((scroll-500)/500,0),1)
+
+Scene.style.opacity = Math.min(Math.max((scroll-100)/500,0),1)
+
+
+
+})
+
+</script>
+
+</body>
+<a href="index.html" class="dot" id="dot1"></a>
+<a href="index2.html" class="dot" id="dot2"></a>
+<a href="index3.html" class="dot" id="dot3"></a>
+<a href="index4.html" class="dot" id="dot4"></a>
+<a href="index5.html" class="dot" id="dot5"></a>
+<a href="index6.html" class="dot" id="dot6"></a>
+</html>

@@ -1,0 +1,271 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<style>
+
+.dot{
+    z-index:999;
+  position:fixed;
+  width:30px;
+  height:30px;
+  background:#00cc66;
+  border-radius:50%;
+
+  box-shadow: 0 0 8px rgba(0,200,100,0.6);
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dot:hover{
+  transform: scale(1.6);
+  box-shadow: 0 0 18px rgba(0,200,100,0.9);
+}
+
+
+#dot1 { top: 15vh; left: 20vw; }
+#dot2 { top: 30vh; left: 60vw; }
+#dot3 { top: 50vh; left: 35vw; }
+#dot4 { top: 70vh; left: 75vw; }
+#dot5 { top: 25vh; left: 80vw; }
+#dot6 { top: 65vh; left: 10vw; }
+
+
+body{
+    margin:0;
+    overflow-x:hidden;
+}
+
+.paragraph{
+    z-index:0;
+    color:rgb(36, 174, 18);
+
+    position:absolute;
+    top:0vh;
+    left:0vw;
+
+    font-size:28px;
+    line-height:1.8;
+
+    box-sizing:border-box;
+
+
+    animation: wind 6s ease-in-out infinite;
+}
+
+@keyframes wind{
+
+0%{
+transform:translateX(0px) skewX(0deg);
+}
+
+20%{
+transform:translateX(6px) skewX(2deg);
+}
+
+40%{
+transform:translateX(-8px) skewX(-3deg);
+}
+
+60%{
+transform:translateX(5px) skewX(2deg);
+}
+
+80%{
+transform:translateX(-4px) skewX(-1deg);
+}
+
+100%{
+transform:translateX(0px) skewX(0deg);
+}
+
+}
+
+.bench{
+z-index:1;
+position:fixed;
+left:10vw;
+top:40vh;
+width:60vw;
+}
+
+#Egypt {
+    z-index: 2;
+    position: fixed;
+    left: 5vw;
+    top: 40vh;
+    width: 40vw;        
+    height:40vh;      
+    
+    opacity: 0;
+
+}
+
+#Egypt:hover {
+    transition:  all 2s ease-in;
+    height:80vh;
+}
+#Bug{
+    z-index: 3;
+    position: fixed;
+    left: 10vw;
+    top: 50vh;
+    width: 20vw;
+
+     opacity: 0;
+}
+
+#Sun{
+    z-index: 2;
+    position: fixed;
+   right: 0vw;
+    top: 0vh;
+    width: 30vw;
+     height: 68vh;      
+
+     opacity: 0;
+    transition:  all 2s ease-in;
+}
+#Sun:hover {
+  height:100vh;
+}
+
+#AI{
+    z-index: 3;
+    position: fixed;
+   right: 20vw;
+    top: 50vh;
+    width: 15vw;
+
+     opacity: 0;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="paragraph" id="info"></div>
+
+<img alt="Camel in Egypt" id="Egypt" src="Egypt.png">
+
+<img alt="First Sun" id="Sun" src="sun.png">
+
+<img alt="Purple bug" id="Bug" src="bug.png">
+
+<img alt="Monira Al Qadiri " id="AI" src="AI.png">
+
+
+
+
+<img alt="the bench" class="bench" src="bench.png">
+
+<script>
+
+let text = `First Sun is a majestic painted aluminum sculpture of a hybrid human-scarab figure that
+reimagines the ancient Egyptian deity Khepri—the god of the rising sun—as a modern
+monument. The figure’s face is a dazzling iridescent scarab beetle, rendered in shimmering
+crystal-based pigments that shift in color depending on the light and time of day. The scarab,
+whose appearance at dawn was associated with the daily rebirth of the sun, is the protagonist,
+inviting viewers to reconsider humanity’s reverence for nature and the creatures we often
+ignore, fear, or exterminate. At a towering 17 feet tall atop its base and resplendent in purple
+and green hues, the sculpture reflects Al Qadiri’s interest in how humanity explores the
+unknown through science, religion, mythology, and art.
+"I hope that this work will prompt people to reflect on how we value nature and embrace the
+unknown," said Al Qadiri. "The scarab was once revered for its mysterious origins. Today,
+insects are feared or ignored, despite being vital to our survival. First Sun encourages us to
+recognize the divine in what we might otherwise overlook."
+Al Qadiri was inspired by a painting inside the Tomb of Ramses I in Luxor, Egypt, which
+depicted a figure with a scarab beetle face. This stunning image led the artist to explore the
+blending of human and insect forms as a symbol of the complex relationship between humanity
+and the natural world.
+The title First Sun evokes the sun's dual representation across cultures—sometimes male,
+sometimes female, reflecting on the intersection of gender and power, and often tied to
+nature’s unpredictable force. With long, flowing hair, Al Qadiri’s sculpture is androgynous, its
+hybrid form transcending traditional categories of gender and species. Thus, the work
+integrates recurring themes in Al Qadiri’s practice, including imagining a post-oil future, gender
+fluidity, ecological interdependence, and mysticism.
+“First Sun is a bright and bold intervention at Doris C. Freedman Plaza, an iconic site that
+serves as a threshold between the bustling city and the reprieve of the first naturalistic park in
+the United States,” said Melanie Kress, Senior Curator at Public Art Fund. “It invites viewers to
+consider how our relationship to nature is always evolving.”
+The sculpture’s iridescent pigments, derived from crystallized plastic – a material often used in
+automotive paints – reflect Al Qadiri’s long-standing interest in materials that are both alluring
+and contradictory. As with the artist’s prior work centering on the Arabian Gulf pearl diving
+industry and subsequent oil economy, First Sun employs aesthetic seduction to raise questions
+of power, spirituality, and consumption. Rooted in both historical myth and futuristic visual
+language, First Sun stands as a beacon in New York City’s urban environment—reminding us
+that reverence, beauty, and divinity might still be found in the unknown or unexpected.
+First Sun also marks a new cultural partnership between Public Art Fund and Toronto’s
+Lassonde Art Trail, a major new destination for public art located along 4.2 kilometers of
+walking paths overlooking Lake Ontario. As a co-commissioned work, First Sun will travel to
+Toronto following its New York presentation, where it will be on view as part of the Lassonde
+Art Trail’s opening season in fall 2026. The first of its kind in Canada, the Lassonde Art Trail will
+be a dynamic public art experience offering artworks by Canadian and international artists,
+open year-round, and completely free to the public.
+“Public Art Fund is committed to sharing the powerful work of visionary artists with the public,
+and our partnership with Lassonde Art Trail furthers this mission, sharing Monira Al Qadiri’s
+work with many new audiences,” said Kress. “This collaborative co-commissioning process
+offered a groundbreaking opportunity for the artist to create a work that responds to both
+X and the site of the Lassonde Art Trail, connecting these two parks with her ideas
+around nature, urban industry, and historical cycles.”“We are delighted to be launching this cultural partnership with Public Art Fund through Al
+Qadiri’s vibrant work. It marks the first co-commissioned artwork between Public Art Fund and
+a Canadian cultural organization, allowing us to unite in bringing art to broader audiences
+across North America,” said November Paynter, Artistic Director and Chief Curator, Lassonde
+Art Trail. “Lassonde Art Trail and Public Art Fund share in the belief that art is an essential
+building block for great public spaces and that the dynamic relationship between nature and
+the built environment is a valuable inspiration for artists and their communities."
+First Sun was conceived by Al Qadiri with both sites in mind – connecting these two distinct
+urban parks that reconnect people with nature. The gleaming sculpture highlights the deep ties
+between human and natural worlds, where even the most humble insects play an essential role
+in sustaining all life on Earth—including our own.Monira Al Qadiri (b. 1983) is a Kuwaiti visual artist born in Senegal, educated in Japan, and
+currently based in Berlin. Her work spans sculpture, film, and performance, exploring themes of
+history, petro-cultures, science fiction, and the divine. Her practice often bridges personal
+narrative and cultural critique, employing unexpected materials and forms to reframe global
+conversations on identity, industry, and the natural world. Concurrent with First Sun, Al Qadiri
+will debut her first solo exhibition first with Perrotin in New York City on September 4, 2025.` 
+let i = 0
+let speed = 10
+
+function typeWriter(){
+
+if(i < text.length){
+
+document.getElementById("info").innerHTML += text.charAt(i)
+
+i++
+
+setTimeout(typeWriter, speed)
+
+}
+
+}
+
+typeWriter()
+
+window.addEventListener("scroll",function(){
+
+let scroll = window.scrollY
+
+let Egypt = document.getElementById("Egypt")
+let Bug = document.getElementById("Bug")
+let Sun = document.getElementById("Sun")
+let AI = document.getElementById("AI")
+
+Egypt.style.opacity = Math.min(scroll/500,1)
+Bug.style.opacity = Math.min(Math.max((scroll-200)/500,0),1)
+Sun.style.opacity = Math.min(Math.max((scroll-400)/500,0),1)
+AI.style.opacity = Math.min(Math.max((scroll-600)/500,0),1)
+})
+
+</script>
+
+</body>
+<a href="index.html" class="dot" id="dot1"></a>
+<a href="index2.html" class="dot" id="dot2"></a>
+<a href="index3.html" class="dot" id="dot3"></a>
+<a href="index4.html" class="dot" id="dot4"></a>
+<a href="index5.html" class="dot" id="dot5"></a>
+<a href="index6.html" class="dot" id="dot6"></a>
+</html>

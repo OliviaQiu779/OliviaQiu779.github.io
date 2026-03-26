@@ -1,0 +1,304 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<style>
+
+.dot{
+    z-index:999;
+    position:fixed;
+  width:30px;
+  height:30px;
+  background:#00cc66;
+  border-radius:50%;
+
+  box-shadow: 0 0 8px rgba(0,200,100,0.6);
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dot:hover{
+  transform: scale(1.6);
+  box-shadow: 0 0 18px rgba(0,200,100,0.9);
+}
+
+
+#dot1 { top: 15vh; left: 20vw; }
+#dot2 { top: 30vh; left: 60vw; }
+#dot3 { top: 50vh; left: 35vw; }
+#dot4 { top: 70vh; left: 75vw; }
+#dot5 { top: 25vh; left: 80vw; }
+#dot6 { top: 65vh; left: 10vw; }
+
+body{
+    margin:0;
+    overflow-x:hidden;
+}
+
+.paragraph{
+    z-index:0;
+    color:rgb(36, 174, 18);
+
+    position:absolute;
+    top:0vh;
+    left:0vw;
+
+    font-size:28px;
+    line-height:1.8;
+
+    box-sizing:border-box;
+
+
+    animation: wind 6s ease-in-out infinite;
+}
+
+@keyframes wind{
+
+0%{
+transform:translateX(0px) skewX(0deg);
+}
+
+20%{
+transform:translateX(6px) skewX(2deg);
+}
+
+40%{
+transform:translateX(-8px) skewX(-3deg);
+}
+
+60%{
+transform:translateX(5px) skewX(2deg);
+}
+
+80%{
+transform:translateX(-4px) skewX(-1deg);
+}
+
+100%{
+transform:translateX(0px) skewX(0deg);
+}
+
+}
+
+.bench{
+z-index:1;
+position:fixed;
+left:10vw;
+top:40vh;
+width:60vw;
+}
+
+#topic {
+  z-index: 10;
+  position: fixed;
+
+  width: 25vw;
+  right: 2vw;
+  top: 35svh;
+
+  padding: 25px;
+
+  font-size: 2vh;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+
+  color: #fff;
+
+background: linear-gradient(
+  135deg,
+  #7f1d1d,
+  #e11d48,
+  #fda4af
+);
+
+box-shadow:
+  0 0 12px rgba(244, 63, 94, 0.5),
+  0 0 25px rgba(190, 18, 60, 0.4);
+
+    animation: breathe 4s ease-in-out infinite;
+
+  opacity: 0;
+}
+
+@keyframes breathe {
+  0% { box-shadow: 0 0 10px rgba(220,38,38,0.4); }
+  50% { box-shadow: 0 0 25px rgba(220,38,38,0.8); }
+  100% { box-shadow: 0 0 10px rgba(220,38,38,0.4); }
+} 
+
+#Gao {
+    z-index: 3;
+  position: fixed;
+  right: 5vw;
+  top: 5vh;
+  width: 40vw;
+
+  opacity: 0;
+}
+
+#Red {
+    z-index: 4;
+  position: fixed;
+  right: 38vw;
+  top: 0vh;
+  width: 10vw;
+   transform: rotate(-15deg);
+
+  opacity: 0;
+}
+
+#Poster {
+    z-index: 3;
+  position: fixed;
+  left: 5vw;
+  top: 35vh;
+  width: 30vw;
+
+  opacity: 0;
+}
+
+#Gao2 {
+    z-index: 4;
+  position: fixed;
+  left: 0vw;
+  top: 25vh;
+  width: 20vw;
+
+  opacity: 0;
+}
+
+</style>
+</head>
+
+<body>
+
+    <h1 id="topic">
+In Loving Memory of Dr. Gao Yaojie (高耀洁) 1927-2023
+A Hero Fighting Against AIDS Crisis in Rural China 
+“但愿世人皆健，何妨我独贫“
+From Her Fellow Chinese Community 
+</h1>
+
+<div class="paragraph" id="info"></div>
+
+<img alt="Gao Yaojie" id="Gao" src="Gao.jpg">
+
+<img alt="AIDS Red Ribbon" id="Red" src="Red.png">
+
+<img alt="AIDS Poster" id="Poster" src="Poster.jpg">
+
+<img alt="Gao Yaojie" id="Gao2" src="Gao2.png"> 
+
+
+
+
+<img alt="the bench" class="bench" src="bench.png">
+
+<script>
+
+let text = `Gao Yaojie (Chinese: 高耀潔; pinyin: Gāo Yàojié; 19 December 1927 – 10 December 2023), courtesy name of Gao Mingkui (Chinese: 高明魁), was a Chinese gynecologist, academic, and AIDS activist based in Zhengzhou, Henan, China. Gao was honoured for her work by the United Nations and Western organizations whilst spending time under house arrest. Her split with the Chinese authorities on the transmission and the seriousness of the AIDS epidemic in the People's Republic of China hindered her further activities, and she left for the United States in 2009, where she settled in Manhattan, New York.
+
+AIDS activism
+Henan was the site of the Bloodhead scandal, which resulted in the rapid spread of the HIV virus during the 1990s among the impoverished rural population who sold blood at unsanitary Henan provincial and private collection centers where blood was collected from paid blood donors into a central tank, the plasma separated, and the remainder of the blood pumped back from the central tank into the donors of the same blood type.[8] Gao became well known in China and worldwide as an advocate for AIDS prevention during the HIV epidemic in the Henan province, as well as her calls on local and national institutions for more attention to people suffering from the disease and children who had been left orphaned after the death of infected parents.[9]
+
+Gao first encountered an AIDS patient in 1996, when she was called to consult for a Zhengzhou hospital.[6] Two weeks prior, they had admitted a woman with the surname Ba, but were unable to diagnose her with anything.[10] On 7 April 1996, Gao diagnosed Ba with AIDS following a blood test.[10][11] Gao suspected that Ba had been infected with HIV due to a blood transfusion several years earlier during an operation on a uterine tumor.[10][11] Ba died ten days later, at the age of 42.[10] Neither the patient's husband nor her child had been infected by HIV, which made Gao wonder whether the virus could be prevented from spreading.[10][11]
+
+Gao began visiting rural villages to determine whether Ba had been an isolated case; however, it turned out there were many more cases.[11]
+
+AIDS prevention efforts
+In late 1996, she began writing materials about preventing the spread of HIV/AIDS, and using her own funds to publish them.[10][11] Her newsletter, Knowledge for HIV Prevention, was first released on 1 December 1996, World AIDS Day.[10][11] She handed out the newsletter at bus stations in Zhengzhou, requesting that passengers bring the newsletter to their destinations in the countryside.[10][11] It went to 15 issues and a total printing of 530,000 copies. The first issue was funded by the Henan Museum of Culture and History and the Song Qingling Foundation, but subsequent issues were funded by Gao, at the cost of between 3,000 and 5,000 yuan per issue.[6][10] The newsletters were also distributed at the Henan Province Epidemic Station, family planning centres, and on buses and trains.[10] In some cases, other newspapers and magazines worked with Gao to distribute her materials alongside their publications.[10]
+
+Gao also included information on HIV/AIDS prevention in the 30 to 70 public lectures she gave each year on health.[10] Her flat eventually became a "command center", where she printed leaflets and answered letters and phone calls from patients, doctors, and teachers about HIV/AIDS.[6][12] Gao was invited by Zhengzhou City television to speak on a live TV program about HIV/AIDS prevention on 1 December 1999.[10]
+
+Gao later decided to further her message by self-publishing a book, titled The Prevention of AIDS / Venereal Disease.[6] After receiving the Jonathan Mann Award for Global Health and Human Rights in 2001, she spent the $20,000 in prize money, supplemented with $10,000 in donations from the Ford Foundation, to print 150,000 copies of the book.[6] Gao donated around 60,000 copies of the book to the Women's Federation of Henan Province, as well as Henan's epidemic prevention station and provincial library, with instructions to further disseminate the books to more rural areas and to smaller organizations.[6] Gao later received requests for the book, primarily from Henan, but also from Hainan, Hubei, Guangdong, Yunnan and the Xinjiang Uygur Autonomous Region.[6]
+
+In the autumn of 2001, Gao surveyed the knowledge of AIDS prevention.[10] Of the more than 10,000 people surveyed, less than 15 percent had a correct understanding of HIV transmission and AIDS prevention, and most of them were utterly ignorant of HIV transmission through blood.[10]
+
+Helping AIDS patients and their families
+As of 2000, most of her efforts were focused on helping "AIDS orphans", or children whose parents died of AIDS, in Henan's villages.[13] Gao also sent patients money, and brought patients medicines, such as painkillers, to treat their symptoms.[10][12] She sent and used so much of her own funds that, beginning in 2000, her husband prevented her from managing the couple's savings.[6]
+
+Yaojie worked alongside Shuping Wang, a health researcher that had previously called out China's poor practices in blood collection that led to the spread of hepatitis C in 1993, and who had also been a whistleblower on the rise of HIV infection a few years later. Wang would provide data to help support Yaojie's advocacy messages.[14]
+
+Government backlash
+Gao was initially tolerated by local officials, but later received more backlash for her "blunt talk and harsh words".[12] Both officials and local press were also unwilling to help her in her education campaigns, instead covering up the issue, fearing that discussing it would give the province a bad reputation.[12][15] Gao's mail was seized, and her phone tapped.[15]
+
+In August 2000, Gao gave an interview to China Newsweekly, with the article being reprinted by multiple outlets.[10] She was ordered by local authorities to not speak to journalists again.[10] Later that year, in November, a lecture Gao was scheduled to give to students was cancelled hours beforehand after she admitted she would be briefly discussing HIV/AIDS.[10]
+
+Recognition
+Despite not being the first Chinese doctor to speak out against the HIV epidemic in the country, Gao's campaigns in favor of AIDS prevention had an impact on the Chinese government's policies aimed to prevent and control the disease.[4] In 2003, the Chinese government admitted officially that AIDS existed in China and promised funds to prevent and control the disease. In 2004, the United Nations Theme Group on HIV/AIDS in China released a report estimating that somewhere between 850,000 and 1.5 million adults in China were infected with HIV as of 2001.[citation needed] In 2007, Chinese health officials estimated that only 740,000 adults were infected with HIV; however, three years later, Gao estimated that the total number of cases across the nation was close to 10 million.[4][16]
+
+In 1999, the Ministry of Education named Gao "a model person concerned with the next generation," but did not invite her to the award ceremony.[10]
+
+In 2001, Gao was awarded the Jonathan Mann Award for Health and Human Rights,[17] In 2002, she was named Time Magazine's Asian Heroine. In 2003, she was awarded the Ramon Magsaysay Award for Public Service in Manila, Philippines.[7][18] In both instances she was denied permission to travel outside China to accept the awards.[2][19] She was also designated one of the "Ten People Who Touched China in 2003" by China Central Television.[4]
+
+Gao was awarded the "Global Leadership Award, Women Changing Our World" by the Vital Voices Global Partnership[20] along with three other women from China and three women from India, Guatemala, and Sudan at the John F. Kennedy Center for the Performing Arts on 14 March 2007.
+
+In April 2007, the International Astronomical Union named the asteroid 38980 after Gao.[21] On 20 September 2007, New York Academy of Sciences gave her "The Heinz R. Pagels Human Rights of Scientists Award."[22]
+
+On 7 February 2015, Gao received the 2014 annual "Liu Binyan Conscience Award". The award ceremony was held at Gao's New York apartment and more than 10 jury members and guests participated. The award was named after Chinese doctor Liu Binyan and the jury consisted of well-known Chinese writers.[23]
+
+Later life
+Gao's husband, Guo Mingju, died in 2006.[4][16] The couple had two daughters and a son, whom Gao was estranged from by 2009.[4][16]
+
+In February 2007, Gao was reported to be under house arrest and unable to travel.[9] She had been pressured by local officials to sign a statement that she is "unable to travel due to poor health".[19] A report on a visit to her apartment, while she was still under house arrest by Henan Province Vice Party Secretary Chen Quanguo, Henan Vice Governor Wang Jumei, and Henan Province Communist Party Organization Department head Ye Dongsong, who presented her with flowers and best wishes from the Henan Party and Government for the Chinese New Year,[24] appeared in the Henan Daily and other Chinese media. On 16 February 2007, bowing to international pressure, the government gave her permission to travel to the United States to receive an award.[25]
+
+The house arrest of Gao was part of a continuing pattern of harassment, especially in Henan Province, of grassroots AIDS activists in China. In 2006, Wan Yanhai, another prominent activist, was detained and prevented from holding an AIDS conference in Beijing. Gao's blog, which she updated until 2009, became what Gao called a "battleground" between her supporters and detractors. Gao in her blog entry of 11 February denounced a hacking of her blog and noted that one visitor left a message that people were being paid 50 RMB each to leave negative comments. Gao wrote that the attacks began after she began describing many cases of people continuing to contract HIV through blood transfusions in Henan Province.[26]
+
+In July 2008, Gao's autobiography The Soul of Gao Yaojie (written in Chinese) was published by Ming Pao Publications Limited (Hong Kong), and the English version, The Soul of Gao Yaojie: A Memoir, was published in November 2011.[27]
+
+Life in the United States
+In May 2009, Gao fled to the United States, after fearing she would be placed under house arrest again. Upon arriving in the United States, she stayed briefly with a Chinese family and then moved to New York with a visiting fellowship from Columbia University. She settled in West Harlem.[16]
+
+In the United States, Gao gave talks on her experiences as a doctor and activist in China.[1] She worked closely with Columbia University professor Andrew J. Nathan, a scholar of Chinese politics who managed her affairs in the United States.[20]
+
+In her later years, Gao struggled with thrombosis.[20] In 2016, she was hospitalized due to pneumonia.[20]
+
+Gao died of natural causes at her residence in Upper Manhattan on 10 December 2023, at age 95. Her death was confirmed by Professor Nathan.[2][4][1]
+
+` 
+let i = 0
+let speed = 10
+
+function typeWriter(){
+
+if(i < text.length){
+
+document.getElementById("info").innerHTML += text.charAt(i)
+
+i++
+
+setTimeout(typeWriter, speed)
+
+}
+
+}
+
+typeWriter()
+
+window.addEventListener("scroll", function() {
+  let scroll = window.scrollY;
+
+  let Gao = document.getElementById("Gao");
+  let Red = document.getElementById("Red");
+  let topic = document.getElementById("topic");
+  let Poster = document.getElementById("Poster");
+  let Gao2 = document.getElementById("Gao2");
+
+  Gao.style.opacity = Math.min(scroll / 500, 1);
+  Red.style.opacity = Math.min(Math.max((scroll - 200) / 500, 0), 1);
+  topic.style.opacity = Math.min(Math.max((scroll - 400) / 500, 0), 1);
+  Poster.style.opacity = Math.min(Math.max((scroll - 600) / 500, 0), 1);
+  Gao2.style.opacity = Math.min(Math.max((scroll - 800) / 500, 0), 1);
+});
+
+</script>
+
+</body>
+<a href="index.html" class="dot" id="dot1"></a>
+<a href="index2.html" class="dot" id="dot2"></a>
+<a href="index3.html" class="dot" id="dot3"></a>
+<a href="index4.html" class="dot" id="dot4"></a>
+<a href="index5.html" class="dot" id="dot5"></a>
+<a href="index6.html" class="dot" id="dot6"></a>
+</html>

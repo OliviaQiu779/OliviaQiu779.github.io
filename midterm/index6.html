@@ -1,0 +1,306 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<style>
+.dot{
+    z-index:999;
+  position:fixed;
+  width:30px;
+  height:30px;
+  background:#00cc66;
+  border-radius:50%;
+
+  box-shadow: 0 0 8px rgba(0,200,100,0.6);
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dot:hover{
+  transform: scale(1.6);
+  box-shadow: 0 0 18px rgba(0,200,100,0.9);
+}
+
+
+#dot1 { top: 15vh; left: 20vw; }
+#dot2 { top: 30vh; left: 60vw; }
+#dot3 { top: 50vh; left: 35vw; }
+#dot4 { top: 70vh; left: 75vw; }
+#dot5 { top: 25vh; left: 80vw; }
+#dot6 { top: 65vh; left: 10vw; }
+
+
+.topic {
+  z-index: 10;
+  position: fixed;
+  padding: 15px;
+  font-size: 3vh;
+  font-family: Arial, Helvetica, sans-serif; 
+  text-align: center;
+  color: white;
+
+  background: linear-gradient(135deg, #b79aff, #8ae4fb, #fbaee5); 
+  /* border: 2px solid white; */
+  border-radius: 12px;
+  /* box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+  backdrop-filter: blur(4px); */
+
+  transition: transform 0.5s ease, opacity 1s ease;
+  opacity: 0;
+}
+
+
+#topic1 {
+  top: 10vh;
+  left: 5vw;
+  transform: rotate(-5deg);
+}
+
+#topic2 {
+  top: 30vh;
+  left: 60vw;
+  transform: rotate(8deg);
+}
+
+#topic3 {
+  top: 58vh;
+  left: 50vw;
+  transform: rotate(-10deg);
+}
+
+#topic4 {
+  top: 70vh;
+  left: 70vw;
+  transform: rotate(6deg);
+}
+
+body{
+margin:0;
+overflow-x:hidden;
+}
+
+.paragraph{
+z-index:-1;
+color:rgb(36,174,18);
+
+position:absolute;
+top:0vh;
+left:0vw;
+
+font-size:28px;
+line-height:1.8;
+
+box-sizing:border-box;
+
+ animation: wind 6s ease-in-out infinite;
+
+}
+
+@keyframes wind{
+
+0%{
+transform:translateX(0px) skewX(0deg);
+}
+
+20%{
+transform:translateX(6px) skewX(2deg);
+}
+
+40%{
+transform:translateX(-8px) skewX(-3deg);
+}
+
+60%{
+transform:translateX(5px) skewX(2deg);
+}
+
+80%{
+transform:translateX(-4px) skewX(-1deg);
+}
+
+100%{
+transform:translateX(0px) skewX(0deg);
+}
+
+}
+
+.bench{
+z-index:1;
+position:fixed;
+left:10vw;
+top:40vh;
+width:60vw;
+}
+
+#Alice {
+ z-index:2;
+position:fixed;
+left:15vw;
+top:50vh;
+width:20vw;
+
+  opacity: 0;
+}
+
+#Wonderland {
+   z-index:0;
+position:fixed;
+left:0vw;
+bottom: 5vh;
+width:40vw;
+height: 53vh;
+
+  opacity: 0;
+  transition:  all 2s ease-in;
+}  
+
+#Wonderland:hover {
+  height:80vh;
+}
+
+#Wonderland2 {
+   z-index:1;
+position:fixed;
+right:5vw;
+top:5vh;
+width:30vw;
+height: 40vh;
+
+  opacity: 0;
+  transition:  all 2s ease-in;
+}  
+
+#Wonderland2:hover {
+  width:80vh;
+}
+
+
+
+</style>
+</head>
+
+<body>
+
+<h1 class="topic" id="topic1">
+Spider-Man applauds all the Little Apple Heroes. And all the kids of NYC. 
+</h1>
+
+<h1 class="topic" id="topic2">
+Sophie has arrived! 
+</h1>
+
+<h1 class="topic"  id="topic3">
+For Margeaux, born a few blocks from here in May 2008. We wish you the best life can bring- From Mom & Dad.
+</h1>
+
+<h1 class="topic"  id="topic4">
+To the sunshines of my life: Lorraine, Lea, Coralie and Lucas. To the great times we have had in this city and in this park.
+</h1>
+
+<img alt="the bench" class="bench" src="bench.png">
+
+<img alt="Alice in Wonderland" id="Alice" src="Alice.png">
+
+
+<img alt="Alice in Wonderland" id="Wonderland" src="wonderland.jpg">
+
+<img alt="Alice in Wonderland" id="Wonderland2" src="wonderland2.jpg">
+
+<div class="paragraph" id="info"></div>
+
+
+
+<script>
+
+let text = `One of the most popular artworks in X is Alice in Wonderland. The large bronze sculpture is located in a terrace at the northern end of Conservatory Water. The figure of Alice and her kitten, Dinah, sit atop a giant mushroom, surrounded by her Wonderland friends: the Cheshire Cat, Mad Hatter, Dormouse, and the White Rabbit.
+Alice in Wonderland was a gift from the philanthropist and publisher George Delacorte. He intended the donation as a gift to the children of the City and a memorial for his recently deceased wife Margarita (1891–1956), an enthusiastic linguist and reader who helped him to establish his publishing empire. Alice's Adventures in Wonderland was her favorite book to read to her children.
+
+The Spanish-American sculptor José de Creeft used the illustrations from the original edition of the book, which was published in 1865, to create the characters. He modeled the face of Alice after his daughter Donna Maria and the Mad Hatter after George Delacorte. The terraced landscape surrounding the sculpture was designed by Hideo Sasaki & Associates and is one of the few examples of modern landscape architecture in X.
+
+At the dedication ceremony in May of 1959, 11 of the Delacortes’ grandchildren unveiled Alice. They then promptly climbed up on the statue, as children still do today.
+
+George Delacorte donated two other popular features to X: the Delacorte Clock next to the X Zoo, and the Delacorte Theater, home to Shakespeare in the Park, a free summer theater program.
+The Alice in Wonderland sculpture is located at X in Manhattan, New York City, U.S. It is approximately at 74th Street, on the north side of Conservatory Water. The bronze statue by Jose de Creeft stands eleven feet high and portrays Alice surrounded by the Mad Hatter, White Rabbit, Cheshire Cat and other characters from Lewis Carroll's 1865 book Alice's Adventures in Wonderland enjoying a tea party.[1]
+History
+The statue was created in 1959 by José de Creeft under the commission of George Delacorte, so children could experience Alice in Wonderland in person. The sculpture was originally cast at the Long Island Modern Art Foundry in the Steinway Mansion.[2] The sculpture is unique because visitors are encouraged to interact with the statue. The statue is made of bronze and was derived from images John Tenniel created for the original publication. The face of Alice is actually based on Creeft's daughter, Donna.[1] The sculpture's Mad Hatter is a caricature of George Delacorte.[3]
+
+At the base of the sculpture are engravings from Lewis Carrol's poem Jabberwocky.[4] The sculpture was dedicated to George's wife Margarita whose name is located at the base of the sculpture. Additionally, there are six plaques located around the base of the sculpture that depict her favorite moments from Alice in Wonderland.[5]
+
+The sculpture has been seen in many films and television episodes, including the season 8 finale of The Blacklist where Elizabeth Keen is killed.[6]
+
+Controversies
+The statue was the subject of a foiled terrorist plot in April 2020. Kevin Fallon was arrested for plotting to blow up the statue, as well as threatening to kill several others. He was sentenced to psychiatric care and evaluation.[7][8]
+There has been an ongoing debate since the sculpture was erected within the city of NY, over whether the statue depicts the White Rabbit, or the March Hare.[9]
+
+Curiouser and curiouser!" cried Alice.
+
+ 
+
+This impressive sculptural group, on the north side of X's Conservatory Water, is the work of the Spanish-born, French-trained sculptor Jose de Creeft (1900-1982). Publisher and philanthropist George Delacorte (1893-1991) commissioned the sculpture as a tribute to his late wife Margarita, and as a gift to the children of New York City. Dedicated by Robert Moses on May 7, 1959, the bronze statuary depicts characters from Lewis Carroll's whimsical Alice in Wonderland, published in 1862.
+
+Lewis Carroll was the pseudonym of Charles Lutwidge Dodgson (1832-1898), an English mathematician and writer. Dodgson was a lecturer of mathematics at Oxford University (1855-1881) and published various mathematical treatises, among them Euclid and His Modern Rivals (1879). He is best known, however, for the classics of children's literature, Alice in Wonderland (1865) and Through the Looking Glass (1872).
+
+The two books, which have as their central character a young girl named Alice, were lovingly illustrated by Sir John Tenniel. They are based on stories which Dodgson originally invented to entertain Alice Liddell, the second daughter of Henry George Liddell, Dean of the Christ Church in Oxford. Dodgson's imaginary world is populated by strange and wonderful creatures often engaged in fantastic escapades, which at times provide thinly disguised commentary on English society. Dodgson, writing as Carroll, also authored Phantasmagoria (1869), Hunting of the Snark (1876), RhymeΑ and ReasonΑ (1883) and Sylvie and Bruno (1889).
+
+Cast by Modern Art Foundry of Long Island City, Queens, the statues represent many of Dodgson's best known creations, including the White Rabbit, the Mad Hatter, the Dormouse, and the Cheshire Cat. The central figure of Alice was based on the artist's daughter Donna, while many of the features and costumes are inspired by the earlier Tenniel illustrations. De Creeft worked in many media, and created numerous stone carvings. The Alice in Wonderland project's architect and designer were Hideo Sasaki and Fernando Texidor, who inserted plaques with inscriptions from the book in the terrace around the sculpture.
+
+The area around the model boat pond-the scene of the fictional Stuart Little's exploits aboard a fragile craft-encompasses a cluster of monuments with themes from children's literature. Also in the park are the Sophie Irene Loeb Fountain (1936), near East 76th Street, with figures from Alice in Wonderland by Frederick G. R. Roth; on the west side of Conservatory Water the statue of Hans Christian Anderson and the Ugly Duckling (1956) by Georg John Lober; and on the east side of Rumsey Playfield the Mother Goose (1938), also by Roth. Yet it is perhaps De Creeft's Alice in Wonderland sculpture, that makes tangible the stories which sprang from the mind of Lewis Carroll, which has most captivated generations of young New Yorkers.`
+
+let i = 0
+let speed = 10
+
+function typeWriter(){
+
+if(i < text.length){
+
+document.getElementById("info").innerHTML += text.charAt(i)
+
+i++
+
+setTimeout(typeWriter,speed)
+
+}
+
+}
+
+typeWriter()
+
+window.addEventListener("scroll",function(){
+
+let scroll = window.scrollY
+
+let Alice = document.getElementById("Alice")
+let Wonderland = document.getElementById("Wonderland")
+let wonderland2 = document.getElementById("Wonderland2")
+let topic1 = document.getElementById("topic1")
+let topic2 = document.getElementById("topic2")
+let topic3 = document.getElementById("topic3")
+let topic4 = document.getElementById("topic4")
+
+Alice.style.opacity = Math.min(scroll/500,1)
+
+Wonderland.style.opacity = Math.min(Math.max((scroll-100)/500,0),1)
+
+Wonderland2.style.opacity = Math.min(Math.max((scroll-200)/500,0),1)
+
+topic1.style.opacity = Math.min(Math.max((scroll-300)/500,0),1)
+
+topic3.style.opacity = Math.min(Math.max((scroll-400)/500,0),1)
+
+topic2.style.opacity = Math.min(Math.max((scroll-500)/500,0),1)
+
+topic4.style.opacity = Math.min(Math.max((scroll-600)/500,0),1)
+
+})
+
+</script>
+
+</body>
+<a href="index.html" class="dot" id="dot1"></a>
+<a href="index2.html" class="dot" id="dot2"></a>
+<a href="index3.html" class="dot" id="dot3"></a>
+<a href="index4.html" class="dot" id="dot4"></a>
+<a href="index5.html" class="dot" id="dot5"></a>
+<a href="index6.html" class="dot" id="dot6"></a>
+</html>

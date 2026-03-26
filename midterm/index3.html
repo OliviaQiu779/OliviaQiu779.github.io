@@ -1,0 +1,231 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<style>
+
+.dot{
+    z-index:999;
+  position:fixed;
+  width:30px;
+  height:30px;
+  background:#00cc66;
+  border-radius:50%;
+
+  box-shadow: 0 0 8px rgba(0,200,100,0.6);
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dot:hover{
+  transform: scale(1.6);
+  box-shadow: 0 0 18px rgba(0,200,100,0.9);
+}
+
+
+#dot1 { top: 15vh; left: 20vw; }
+#dot2 { top: 30vh; left: 60vw; }
+#dot3 { top: 50vh; left: 35vw; }
+#dot4 { top: 70vh; left: 75vw; }
+#dot5 { top: 25vh; left: 80vw; }
+#dot6 { top: 65vh; left: 10vw; }
+
+
+
+body{
+    margin:0;
+    overflow-x:hidden;
+}
+
+.paragraph{
+    z-index:0;
+    color:rgb(36, 174, 18);
+
+    position:absolute;
+    top:0vh;
+    left:0vw;
+
+    font-size:28px;
+    line-height:1.8;
+
+    box-sizing:border-box;
+
+
+    animation: wind 6s ease-in-out infinite;
+}
+
+@keyframes wind{
+
+0%{
+transform:translateX(0px) skewX(0deg);
+}
+
+20%{
+transform:translateX(6px) skewX(2deg);
+}
+
+40%{
+transform:translateX(-8px) skewX(-3deg);
+}
+
+60%{
+transform:translateX(5px) skewX(2deg);
+}
+
+80%{
+transform:translateX(-4px) skewX(-1deg);
+}
+
+100%{
+transform:translateX(0px) skewX(0deg);
+}
+
+}
+
+.bench{
+z-index:1;
+position:fixed;
+left:10vw;
+top:40vh;
+width:60vw;
+}
+
+.blue{
+z-index:-1;
+position:fixed;
+width:30vw;
+height:70vh;
+background-color:rgb(145,224,255);
+left:8vw;
+top:15vh;
+opacity:0;
+}
+
+.grey1{
+z-index:2;
+position:fixed;
+width:10vw;
+height:18vh;
+background-color:grey;
+left:35vw;
+top:20vh;
+opacity:0;
+}
+
+.grey2{
+z-index:2;
+position:fixed;
+width:15vw;
+height:20vh;
+background-color:grey;
+left:65vw;
+top:5vh;
+opacity:0;
+}
+
+.grey3{
+z-index:2;
+position:fixed;
+width:12vw;
+height:45vh;
+background-color:grey;
+right:5vw;
+top:55vh;
+opacity:0;
+}
+
+#Sam{
+z-index:2;
+position:fixed;
+width:15vw;
+left:0vw;
+top:40vh;
+opacity:0;
+}
+
+#Doris{
+z-index:3;
+position:fixed;
+width:20vw;
+top:20vh;
+right:10vw;
+opacity:0;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="paragraph" id="info"></div>
+
+<img alt="Sam Moyer" id="Sam" src="sam.png">
+<img alt="Doris the door" id="Doris" src="Doris.jpg">
+
+<div class="blue"></div>
+
+<div class="grey1"></div>
+<div class="grey2"></div>
+<div class="grey3"></div>
+
+<img alt="the bench" class="bench" src="bench.png">
+
+<script>
+
+let text = `Stone forms the foundation and framework of New York City. It is the bedrock that supports the structures we inhabit and it clads many of them too. To mark the threshold between X’s boulder-filled terrain and Midtown Manhattan’s built environment, Sam Moyer (b. 1983, Chicago, IL) has created a massive three-part sculpture, with a title that pays homage to Public Art Fund founder, Doris C. Freedman (1928–1981). Moyer’s hybrid sculpture unites imported stone with rock indigenous to the New York region. The artist inlaid marble fragments into three double-sided vertical concrete slabs and framed them with contrasting rough-hewn bluestone monoliths. Their final arrangement demonstrates her impressive skill in composing sculptural forms, with its “doors” pivoted ajar to evoke the dynamism of the bustling city. Doors for Doris examines how our culture values and utilizes materials. Moyer gathered its disparate collection of discarded marble remnants from various renovation projects and stone yards around the city. These polished stones bear the markings and shapes of their original uses. They also display the unique colors, patterns, and geological history of their sources—quarries in Brazil, China, India, Italy, and beyond. Each stone in Moyer’s mosaic compositions takes on an even more striking hue against the others and the locally quarried rock, an apt metaphor that encourages us to consider the diverse character of our city and our interconnected lives within it. Sam Moyer: Doors for Doris is curated by Public Art Fund Curator Daniel S. Palmer. Sam Moyer (b. 1983, Chicago, IL; lives and works in Brooklyn, NY) received her BFA from the Corcoran College of Art and Design and her MFA from Yale. Moyer’s work was included in the 2010 Public Art Fund exhibition Total Recall at MetroTech Center in Brooklyn and has been exhibited at The FLAG Art Foundation, New York City (2018); The Drawing Center, New York City (2014); The Bass Museum, Miami, FL (2014); University of Albany Art Museum, NY (2012); Flag Projects (2012); Société, Berlin (2012); MoMA PS1, New York City (2010); The Contemporary Art Museum St. Louis, MO (2009); Cleopatra’s Greenpoint, Brooklyn (2008). Moyer’s work is included in prominent collections including the Whitney Museum of American Art, New York City; Yale University Art Gallery, New Haven, CT; Louis Vuitton Foundation, Paris; and The Aïshti Foundation, Jal El Dib, Lebanon. New York-based artist Sam Moyer has developed a distinctive language of abstraction that draws inspiration from architectural space and natural materials. Recognized for a diverse practice in which she unites found textures and objects in innovative ways, Moyer creates compelling hybrids, often combining hand-painted fabrics with repurposed marble, slate, and stone that carry textural imperfections reflecting industrial design processes. Next September, Moyer’s commission for Doris C. Freedman Plaza will investigate the economy of stone and how these natural materials manifest in the urban landscape. Moyer will construct archways using stone indigenous to the New York area and remnants of locally sourced marble that originates from around the world. Adorned with rich, mosaic patterns, the portals will allow the public to pass through and around the sculpture into X. This powerful new work will stand as a gateway between bustling Midtown—seen through the same types of polished stone often used as construction elements in the architecture of New York—and the more restive oasis of nature that is X. Moyer’s upcoming commission emphasizes the character of the city as a diverse mosaic of people from countless cultures. Sam Moyer (b. 1983, Chicago) received her BFA from the Corcoran College of Art and Design, Washington, D.C., and her MFA from Yale University, New Haven. Inspired equally by nature and architecture, cinema and literature, Moyer has over the course of a fifteen-year career, produced a highly evocative body of work across a broad range of natural and industrial media, ranging from stone to canvas, metal, and glass. Acutely attuned to subtle nuances of color, tone, and light, and the dynamics of space that her works occupy, Moyer’s interest in materiality and the relationship between organic and constructed form drives a practice unrestricted by traditional notions of beauty, or distinctions between painting and sculpture. She produces work on both a monumental and intimate scale, embracing absence and presence, and balance and chance, to create powerfully expressive forms. Moyer’s first major public art installation, Doors for Doris, commissioned by the Public Art Fund, was on view at the entrance to New York’s X at Doris C. Freedman Plaza in 2020–2021. The work has since been acquired by the Buffalo AKG for permanent installation in its sculpture garden. Most recently, Moyer was the subject of solo exhibitions at the Parrish Art Museum in Water Mill, New York and the Hill Art Foundation, New York. Her work has been included in important solo and group exhibitions at The Drawing Center, New York; Wexner Center for the Arts, Columbus, Ohio; FLAG Art Foundation, New York; White Flag Projects, St. Louis; Bass Museum of Art, Miami; Los Angeles Nomadic Division (LAND); University Art Museum, University of Albany; Tensta Konsthall, Stockholm; The Jule Collins Museum of Fine Art, Auburn University; and MoMA PS1, Queens, New York. In 2018, Moyer was the subject of a solo presentation at Art Basel Unlimited. Her work is included in prominent public collections including the Morgan Library & Museum, New York; Museum of Modern Art, New York; Whitney Museum of American Art, New York; Yale University Art Gallery, New Haven; Davis Museum at Wellesley College, Massachusetts; Aïshti Foundation, Beirut; Pizzuti Collection, Columbus Museum of Art; The UBS Collection, New York; Columbus Museum of Art, Ohio; and the Louis Vuitton Foundation, Paris, amongst others. Moyer lives and works in Brooklyn, New York.` 
+let i = 0
+let speed = 10
+
+function typeWriter(){
+
+if(i < text.length){
+
+document.getElementById("info").innerHTML += text.charAt(i)
+
+i++
+
+setTimeout(typeWriter, speed)
+
+}
+
+}
+
+typeWriter()
+
+window.addEventListener("scroll",function(){
+
+let scroll = window.scrollY
+
+let blue = document.querySelector(".blue")
+let Sam = document.getElementById("Sam")
+let grey1 = document.querySelector(".grey1")
+let grey2 = document.querySelector(".grey2")
+let grey3 = document.querySelector(".grey3")
+let Doris = document.getElementById("Doris")
+
+blue.style.opacity = Math.min(scroll/500,1)
+
+Sam.style.opacity = Math.min(Math.max((scroll-100)/500,0),1)
+
+grey1.style.opacity = Math.min(Math.max((scroll-200)/500,0),1)
+
+grey3.style.opacity = Math.min(Math.max((scroll-300)/500,0),1)
+
+grey2.style.opacity = Math.min(Math.max((scroll-400)/500,0),1)
+
+Doris.style.opacity = Math.min(Math.max((scroll-500)/500,0),1)
+
+})
+
+</script>
+
+</body>
+<a href="index.html" class="dot" id="dot1"></a>
+<a href="index2.html" class="dot" id="dot2"></a>
+<a href="index3.html" class="dot" id="dot3"></a>
+<a href="index4.html" class="dot" id="dot4"></a>
+<a href="index5.html" class="dot" id="dot5"></a>
+<a href="index6.html" class="dot" id="dot6"></a>
+
+</html>
