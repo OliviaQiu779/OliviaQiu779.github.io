@@ -5,14 +5,9 @@
 
 <style>
 
-body{
-  margin:0;
-  height:100vh;
-  background:white;
-  overflow:hidden;
-}
 
 .dot{
+    z-index:999;
   position:fixed;
   width:30px;
   height:30px;
@@ -31,22 +26,186 @@ body{
 
 
 #dot1 { top: 15vh; left: 20vw; }
+#dot2 { top: 30vh; left: 60vw; }
 #dot3 { top: 50vh; left: 35vw; }
 #dot4 { top: 70vh; left: 75vw; }
 #dot5 { top: 25vh; left: 80vw; }
 #dot6 { top: 65vh; left: 10vw; }
+
+body{
+    margin:0;
+    overflow-x:hidden;
+}
+
+.paragraph{
+z-index:0;
+color:rgb(36,174,18);
+
+position:absolute;
+top:0vh;
+left:0vw;
+
+font-size:28px;
+line-height:1.8;
+
+box-sizing:border-box;
+
+animation: wind 6s ease-in-out infinite;
+}
+
+
+@keyframes wind{
+
+0%{
+transform:translateX(0px) skewX(0deg);
+}
+
+20%{
+transform:translateX(6px) skewX(2deg);
+}
+
+40%{
+transform:translateX(-8px) skewX(-3deg);
+}
+
+60%{
+transform:translateX(5px) skewX(2deg);
+}
+
+80%{
+transform:translateX(-4px) skewX(-1deg);
+}
+
+100%{
+transform:translateX(0px) skewX(0deg);
+}
+
+}
+
+.bench{
+    z-index:1;
+    position:fixed;
+    left:10vw;
+    top:40vh;
+    width:60vw;
+}
+
+.orange{
+    z-index:-1;
+    position:fixed;
+    width:50vw;
+    height:46vh;
+    background-color:orange;
+    right:8vw;
+    top:20vh;
+
+    opacity:0;
+}
+
+#CJ{
+    z-index:2;
+    position:fixed;
+    width:22vw;
+    left:0vw;
+    top:48vh;
+
+    opacity:0;
+}
+
+#map{
+    z-index:2;
+    position:fixed;
+    width:15vw;
+    right:15vw;
+    top:0vh;
+
+    opacity:0;
+}
+
+#flag {
+    z-index: 3;
+    position:fixed; 
+    width:20vw;
+    left:12vw;
+    top:32vh;
+
+     opacity:0;
+}
 
 </style>
 </head>
 
 <body>
 
-<a href="index9.html" class="dot" id="dot1"></a>
+<div class="paragraph" id="info"></div>
+
+<div class="orange"></div>
+
+<img alt="the bench" class="bench" id="bench1" src="bench.png">
+
+<img alt="Artists Christo & Jeanne Claude" id="CJ" src="CJ.png">
+
+<img alt="the map of the installation" id="map" src="map.png">
+
+<video alt="orange flags" loop controls id="flag" src="flag.MOV" type="video/[your-video-format]"></video> 
+
+<script>
+
+let text = `Nearly thirty years after the artists Christo and Jeanne-Claude first conceived of The Gates, this logistically complex project was finally realized over a period of two weeks in New York’s X. Each gate, a rectilinear three-sided rigid vinyl frame resting on two steel footings, supported saffron-colored fabric panels that hung loosely from the top. The gates themselves matched the brilliant color of the fabric. The statistics are impressive: 7,503 gates ran over 23 miles of walkways; each gate was 16 feet high, with widths varying according to the paths’ width. Despite a brief exhibition period—February 12th through 27th 2005—The Gates remains a complex testament to two controversial topics in contemporary art: how to create meaningful public art and how art responds to and impacts our relationship with the built environment. Wrapped, surrounded, suspended Since the 1960s, Christo and Jeanne-Claude have introduced eye-catching color into the landscape, for example pink in Surrounded Islands, 1980–83 in Biscayne Bay, Florida. The saffron color in The Gates was used to create “a golden ceiling creating warm shadows” for the visitor walking along the X path. [1] The same color also appeared in an earlier work by Christo and Jeanne-Claude, Valley Curtain, in Rifle, Colorado. In contrast to many of their works that directly intervene in urban structures like the Pont Neuf in Paris or the German Parliament building in Berlin, where architectural masses are literally wrapped, Surrounded Islands and Valley Curtain engage, rather than seek to contain nature: a pink border of fabric floating around islands or a curtain suspended across a remote valley. The Gates respond to spaces designed by Frederick Law Olmsted and Calvert Vaux within the dense urban grid of Manhattan. The artists complicate an environment that was, in fact, entirely invented in the mid-19th century to express the Victorian ideal of the pastoral and picturesque landscape. This intrusion into Manhattan’s “natural environment” left many visitors uneasy, as in the case of Joanne Landy: Whoever wrote about the way the exhibit draws aesthetic attention to the park itself is off the mark, in my experience anyway. The flags just draw attention to themselves, period, and there appears to be no particular relationship to the shapes and colors of the park. That’s part of the problem. A point of contrast can be seen at the Storm King Art Center, a renowned sculpture park 52 miles north of New York City that has successfully cultivated a dialogue between sculptures and their landscape for over fifty years. Whereas sculptures are installed within the meadows and rolling hills of Storm King’s grounds, The Gates were tied to the paths that meander through the park. This was done for two reasons: to avoid drilling thousands of holes into the soil and potentially harming the root systems of adjacent trees, and because Christo and Jeanne-Claude were inspired by the way the city’s pedestrians navigate its paths. Thus, in contrast to the works in Biscayne Bay and Rifle that divide and isolate forms in the landscape, The Gates aligned itself along pre-existing pathways of movement. A path cut into a pristine natural environment is very much an intervention, as evidenced in Richard Long’s A Line Made by Walking, 1967 and Walter De Maria’s One Mile Long Drawing, 1969. However X, a much-loved urban oasis, is one of the most famous examples of urban planning. The Gates reinforce and highlight pre-existing routes within this manmade environment. Critiques of The Gates that are rooted in the issue of the artwork’s relationship with nature are therefore curious since the Park itself is not an untouched natural space. This installation alters the experience of seeing and walking along the paths that run throughout the park. The title alludes to a threshold, a point of exit and entrance. In fact, in some places, the structures form an oval. There is no starting point and no end point and moreover, no favored point from which to view the work. It is an installation made for the pedestrian in motion and not a static object that asks us to stand still before it. The Gates cost 21 million dollars and both the artists and the supporting institutions (the City of New York and the X Conservancy) were quick to emphasize that Christo and Jeanne-Claude financed the project themselves and that the installation was free to the public. The artists sold preparatory drawings related to The Gates, and other works, before the exhibition opened; they rely on this method to independently fund their projects since they do not accept sponsors. Though the City and the X Conservancy did not use public money to support this project, their approval and support were seen as an invaluable currency by many critics. Months before The Gates debuted, both institutions had worked in concert to prevent United for Peace from holding an antiwar demonstration in X to coincide with the Republican National Convention which was held in New York that year. It is important to remember that Christo and Jeanne-Claude’s favorable turn with the powers that be was 26 years in the making. The artists submitted proposals, attended meetings, and made presentations throughout this period, persisting even after they received a 251-page official rejection only three years into their campaign. Many consider the 2001 mayoral election of Michael Bloomberg—a Christo and Jeanne-Claude collector—as the turning point in this saga. The artists are accustomed to bureaucratic battles, an inevitability given subjects that reshape iconic structures such as their The Pont Neuf, Wrapped, 1975–85, Wrapped Reichstag, 1971–95, and The Gates. It might seem odd that Christo and Jeanne-Claude invest so much time, effort, reputation, and money in creating ephemeral non-collectible artwork. Yet they are completely devoted to this kind of artistic practice. The temporary quality of the projects is an aesthetic decision. Our works are temporary in order to endow the works of art with a feeling of urgency to be seen, and the love and tenderness brought by the fact that they will not last. Those feelings are usually reserved for other temporary things such as childhood and our own life. These are valued because we know that they will not last. We want to offer this feeling of love and tenderness to our works, as an added value and as an additional aesthetic quality. Christo and Jeanne-Claude were a collaborative artist duo known for their large-scale environmental installations. The couple were part of France's Nouveau Réalisme movement. They are best remembered for wrapping architectural and landscape elements in fabric, often on an unprecedented scale. These artworks included the Wrapped Reichstag in Berlin, The Pont-Neuf Wrapped in Paris, The Gates in New York's X, the 39 kilometre long Running Fence down the California coast and Wrapped Coast in Australia. The art critic David Bourdon has described these wrappings as a revelation through concealment. The installation in X was completed with the blooming of the 7,503 fabric panels on February 12, 2005. The 7,503 gates were 4.87 meters (16 feet) tall and varied in width from 1.68 to 5.48 meters (5 feet 6 inches to 18 feet) according to the 25 different widths of walkways, on 37 kilometers (23 miles) of walkways in X. Free hanging saffron colored fabric panels, suspended from the horizontal top part of the gates, came down to approximately 2.1 meters (7 feet) above the ground. The gates were spaced at 3.65 meter (12 foot) intervals, except where low branches extended above the walkways. The gates and the fabric panels could be seen from far away through the leafless branches of the trees. The work of art remained for 16 days, then the gates were removed and the materials recycled.
+
+The 12.7 cm (5 inch) square vertical and horizontal poles were extruded in 96.5 km (60 miles) of saffron colored vinyl. The vertical poles were secured by 15,006 narrow steel base footings, 278 to 380 kilograms (613 to 837 pounds) each, positioned on the paved surfaces. No holes were made in the ground. The gates' components were fabricated, off-site, by seven manufacturers located on the East Coast of the USA. The weaving and sewing of the fabric panels was done in Germany.
+
+In teams of eight, 600 workers wearing "The Gates" uniforms, were responsible for installing 100 gates per team. The monitoring and removal teams included an additional 300 uniformed workers. The monitors assisted the public and gave information. All workers were financially compensated and received breakfast and one hot meal a day. Professional security worked in the park after dark.
+
+The Gates was entirely financed by Christo and Jeanne-Claude, as they have done for all their previous projects. The artists did not accept sponsorship or donations.
+
+`
+
+let i = 0
+let speed = 10
+
+function typeWriter(){
+
+    if(i < text.length){
+
+        document.getElementById("info").innerHTML += text.charAt(i)
+
+        i++
+
+        setTimeout(typeWriter, speed)
+
+    }
+
+}
+
+typeWriter()
+
+window.addEventListener("scroll", function(){
+
+    let scroll = window.scrollY
+
+    let orange = document.querySelector(".orange")
+    let cj = document.getElementById("CJ")
+    let map = document.getElementById("map")
+     let flag = document.getElementById("flag")
+
+    orange.style.opacity = Math.min(scroll / 500, 1)
+
+    cj.style.opacity = Math.min(Math.max((scroll-200)/500,0),1)
+
+    map.style.opacity = Math.min(Math.max((scroll-400)/500,0),1)
+
+     flag.style.opacity = Math.min(Math.max((scroll-600)/500,0),1)
+
+})
+
+</script>
+
+</body>
+<a href="index.html" class="dot" id="dot1"></a>
+<a href="index2.html" class="dot" id="dot2"></a>
 <a href="index3.html" class="dot" id="dot3"></a>
 <a href="index4.html" class="dot" id="dot4"></a>
 <a href="index5.html" class="dot" id="dot5"></a>
 <a href="index6.html" class="dot" id="dot6"></a>
-
-
-</body>
 </html>
