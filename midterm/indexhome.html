@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<style>
+
+body{
+  margin:0;
+  height:100vh;
+  background:white;
+  overflow:hidden;
+}
+
+.dot{
+  position:fixed;
+  width:30px;
+  height:30px;
+  background:#00cc66;
+  border-radius:50%;
+
+  box-shadow: 0 0 8px rgba(0,200,100,0.6);
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dot:hover{
+  transform: scale(1.6);
+  box-shadow: 0 0 18px rgba(0,200,100,0.9);
+}
+
+
+#dot1 { top: 15vh; left: 20vw; }
+#dot2 { top: 30vh; left: 60vw; }
+#dot3 { top: 50vh; left: 35vw; }
+#dot4 { top: 70vh; left: 75vw; }
+#dot5 { top: 25vh; left: 80vw; }
+#dot6 { top: 65vh; left: 10vw; }
+
+</style>
+</head>
+
+<body>
+
+<a href="index.html" class="dot" id="dot1"></a>
+<a href="index2.html" class="dot" id="dot2"></a>
+<a href="index3.html" class="dot" id="dot3"></a>
+<a href="index4.html" class="dot" id="dot4"></a>
+<a href="index5.html" class="dot" id="dot5"></a>
+<a href="index6.html" class="dot" id="dot6"></a>
+
+
+</body>
+</html>
